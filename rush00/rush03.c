@@ -1,50 +1,71 @@
-#include <stdio.h>
+void	ft_putchar(char c);
+void	print_space_letters(int column, int x);
+void	print_only_letters(int column, int x);
 
-void ft_putchar(char c);
-void imprime_linha(int coluna, int x);
-void imprime_coluna(int coluna, int x);
+void	rush(int x, int y)
+{
+	char	break_line;
+	int		row_index;
+	int		column_index;
 
-void rush(int x, int y) {
-	
-	char quebra_linha = '\n';
-	int indice_linha;
-	int ind_coluna;
-	
-	indice_linha = 1;
-	while (indice_linha <= y) {
-		
-		ind_coluna = 1;
-		while (ind_coluna <= x) {
-			if (indice_linha == 1 || indice_linha == y) {
-				imprime_coluna(ind_coluna, x);
-			} else {
-				imprime_linha(ind_coluna, x);
+	break_line = '\n';
+	row_index = 1;
+	while (row_index <= y)
+	{
+		column_index = 1;
+		while (column_index <= x)
+		{
+			if (row_index == 1 || row_index == y)
+			{
+				print_only_letters(column_index, x);
 			}
-			ind_coluna++;
+			else
+			{
+				print_space_letters(column_index, x);
+			}
+			column_index++;
 		}
-		ft_putchar(quebra_linha);
-		indice_linha++;
+		ft_putchar(break_line);
+		row_index++;
 	}
 }
 
-void imprime_coluna(int coluna, int x) {
-	char a = 'A';
-	char b = 'B';
-	char c = 'C';
-	char espaco = ' ';
-	
-	if(coluna == 1) { ft_putchar(a); } 
-	else if (coluna == x) { ft_putchar(c); } 
-	else { ft_putchar(b); }
-}
+void	print_only_letters(int column, int x)
+{
+	char	a;
+	char	b;
+	char	c;
 
-void imprime_linha(int coluna, int x) {
-	char b = 'B';
-	char espaco = ' ';
-
-	if (coluna == 1 || coluna == x) {
+	a = 'A';
+	b = 'B';
+	c = 'C';
+	if (column == 1)
+	{
+		ft_putchar(a);
+	}
+	else if (column == x)
+	{
+		ft_putchar(c);
+	}
+	else
+	{
 		ft_putchar(b);
-	} else { ft_putchar(espaco);}
+	}
 }
 
+void	print_space_letters(int column, int x)
+{
+	char	b;
+	char	space;
 
+	b = 'B';
+	space = ' ';
+	if (column == 1 || column == x)
+	{
+		ft_putchar(b);
+	}
+	else
+	{
+		ft_putchar(space);
+	}
+}

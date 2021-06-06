@@ -1,9 +1,7 @@
-#include <unistd.h>
+void	rush(int x, int y);
 
-void ft_putchar(char c);
-void rush(int x, int y);
-
-int main() {
-	rush(5,1);
-	return 0;
+int	main(void)
+{
+	rush(5, 3);
+	return (0);
 }
