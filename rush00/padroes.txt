@@ -1,0 +1,20 @@
+x é primeiro parametro e responsavel pelas qtd colunas
+y é o segundo parametro e responsavel pelas qtd linhas
+
+rush(1,1)
+
+Se linha(y) e coluna(x) forem na posição(1, 1) o valor será A
+
+rush(5,1)
+
+que a primeira posição do x(coluna) o valor será A e que ultima posição do x(coluna) o valor será C e quando nossa posição do y(linha) for a primeira o restante do y(colunas) será B
+
+rush(5, 3)
+
+	que na primeira linha(y) da primeira coluna(x) e ultima linha da primeira coluna(x) será apresentado A
+
+	que na última coluna(x) e primeira linha(x) e última coluna(x) e última linha(y) será apresentado o valor de C
+
+	quando nossa impressão não for um dos quatros cantos e estiver em uma dessas opções: primeira linha, ultima linha, primeira coluna e ultima coluna nossa impressão resultará em B
+
+	caso não for nenhuma dessas opções a impressão deverá um espaço em branco.
