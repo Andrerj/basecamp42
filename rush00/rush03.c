@@ -10,23 +10,27 @@ void	rush(int x, int y)
 
 	break_line = '\n';
 	row_index = 1;
-	while (row_index <= y)
+
+	if (y >= 1 && x >= 1)
 	{
-		column_index = 1;
-		while (column_index <= x)
+		while (row_index <= y)
 		{
-			if (row_index == 1 || row_index == y)
+			column_index = 1;
+			while (column_index <= x)
 			{
-				print_only_letters(column_index, x);
+				if (row_index == 1 || row_index == y)
+				{
+					print_only_letters(column_index, x);
+				}
+				else
+				{
+					print_space_letters(column_index, x);
+				}
+				column_index++;
 			}
-			else
-			{
-				print_space_letters(column_index, x);
-			}
-			column_index++;
+			ft_putchar(break_line);
+			row_index++;
 		}
-		ft_putchar(break_line);
-		row_index++;
 	}
 }
 
