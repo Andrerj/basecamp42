@@ -34,7 +34,7 @@ void	ft_second_number(char m, char c)
 	}	
 }
 
-void	ft_print_comb(void)
+void	ft_print_comb2(void)
 {
 	char	m;
 	char	c;
@@ -54,6 +54,6 @@ void	ft_print_comb(void)
 
 int	main(void)
 {
-	ft_print_comb();
+	ft_print_comb2();
 	return (0);
 }
