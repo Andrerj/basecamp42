@@ -1,13 +1,16 @@
-#include <unistd.h>
 #include <stdio.h>
 
-void	ft_putsr(char *str)
+int		ft_strlen(char *str)
 {
-	
+	int c;
+
+	c = 0;
 	while (*str != '\0') {
-		write(1, str, 1);
 		str++;
+		c++;
 	}
+	printf("%d", c);
+	return c;
 }
 
 int		main(void)
@@ -15,6 +18,6 @@ int		main(void)
 	char *str;
 
 	str = "Aloha";
-	ft_putsr(str);
+	ft_strlen(str);
 	return (0);
 }
